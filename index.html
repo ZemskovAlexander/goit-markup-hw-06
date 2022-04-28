@@ -356,62 +356,82 @@
     <!-- Футер -->
 
     <footer class="footer">
-      <div class="container">
-        <ul class="flex-footer list">
-          <li>
-            <div class="logotype">
-              <a href="./index.html" class="logo-ft">
-                Web<span class="logo-footer">Studio</span>
-              </a>
-            </div>
+      <div class="container footer-flex-container">
+        <div class="link-logo-footer">
+          <div class="logotype">
+            <a href="./index.html" class="logo-ft">
+              Web<span class="logo-footer">Studio</span>
+            </a>
+          </div>
 
-            <address class="adress">
-              <p class="adress-geo list">г. Киев, пр-т Леси Украинки, 26</p>
-              <ul class="contact-nav list">
-                <li class="item">
-                  <a href="mailto:info@devstudio.com" class="contact"
-                    >info@devstudio.com</a
-                  >
-                </li>
-                <li class="item">
-                  <a href="tel:+380961111111" class="contact"
-                    >+38 096 111 11 11</a
-                  >
-                </li>
-              </ul>
-            </address>
-          </li>
-          <li>
-            <div class="join-list">
-              <h3 class="join list">присоединяйтесь</h3>
+          <address class="adress">
+            <p class="adress-geo list">г. Киев, пр-т Леси Украинки, 26</p>
+            <ul class="contact-nav list">
+              <li class="item">
+                <a href="mailto:info@devstudio.com" class="contact"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="item">
+                <a href="tel:+380961111111" class="contact"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
 
-              <div class="element-icon">
-                <a href class="social-botom">
-                  <svg class="social-icon" width="20" height="20">
-                    <use href="./icon/sprite.svg#icon-instagram"></use>
-                  </svg>
-                </a>
-                <a href class="social-botom">
-                  <svg class="social-icon" width="20" height="20">
-                    <use href="./icon/sprite.svg#icon-twitter"></use>
-                  </svg>
-                </a>
-                <a href class="social-botom">
-                  <svg class="social-icon" width="20" height="20">
-                    <use href="./icon/sprite.svg#icon-facebook"></use>
-                  </svg>
-                </a>
-                <a href class="social-botom">
-                  <svg class="social-icon" width="20" height="20">
-                    <use href="./icon/sprite.svg#icon-linkedin"></use>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </li>
-        </ul>
+        <div class="join-list">
+          <h3 class="join list">присоединяйтесь</h3>
+
+          <div class="element-icon">
+            <a href class="social-botom">
+              <svg class="social-icon" width="20" height="20">
+                <use href="./icon/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+            <a href class="social-botom">
+              <svg class="social-icon" width="20" height="20">
+                <use href="./icon/sprite.svg#icon-twitter"></use>
+              </svg>
+            </a>
+            <a href class="social-botom">
+              <svg class="social-icon" width="20" height="20">
+                <use href="./icon/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+            <a href class="social-botom">
+              <svg class="social-icon" width="20" height="20">
+                <use href="./icon/sprite.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <form name="footer-form" autocomplete="on">
+          <label for="footer-mail" class="contact-form-mail-label"
+            >Подпишитесь на рассылку</label
+          >
+          <input
+            type="email"
+            name="user-mail-footer"
+            class="contact-form-mail"
+            id="footer-mail"
+            placeholder="E-mail"
+            required
+          />
+          <button type="submit" class="contact-form-submit-button">
+            Подписаться
+            <svg class="btn-footer-icon" width="24px" height="24px">
+              <use href="./icon/sprite.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </footer>
+
+    <!-- /* =====Backdrop==== */ -->
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="btn-modal" type="button" data-modal-close>
@@ -419,8 +439,69 @@
             <use href="./icon/sprite.svg#icon-close"></use>
           </svg>
         </button>
+        <b class="title-modal-form">Оставьте свои данные, мы вам перезвоним</b>
+        <form name="modal-form">
+          <label class="modal-form-label" for="user-name">Имя</label>
+          <span class="icon-wrapper">
+            <input
+              type="text"
+              class="modal-form-input input-form"
+              name="user-name"
+              id="user-name"
+              required
+            />
+            <svg class="modal-icon" width="18" height="18">
+              <use href="./icon/sprite.svg#icon-person-black-18dp"></use>
+            </svg>
+          </span>
+          <label class="modal-form-label">Телефон</label>
+          <span class="icon-wrapper">
+            <input
+              name="user-phone"
+              type="tel"
+              class="modal-form-input input-form"
+              required
+            />
+            <svg class="modal-icon" width="18" height="18">
+              <use href="./icon/sprite.svg#icon-phone-black-18dp"></use>
+            </svg>
+          </span>
+
+          <label class="modal-form-label">Почта </label>
+          <span class="icon-wrapper">
+            <input
+              name="user-mail"
+              type="email"
+              class="modal-form-input input-form"
+            />
+            <svg class="modal-icon" width="18" height="18">
+              <use href="./icon/sprite.svg#icon-email-black-18dp"></use>
+            </svg>
+          </span>
+          <label for="user-message" class="modal-form-label">Комментарий</label>
+          <textarea
+            name="user-message"
+            class="modal-form-input textarea-form"
+            placeholder="Введите текст"
+            id="user-message"
+          ></textarea>
+          <div class="checkbox-modal-wrapper">
+            <input
+              type="checkbox"
+              id="user-policy"
+              name="user-policy"
+              class="visually-hidden modal-form-checkbox"
+            />
+            <label for="user-policy" class="modal-form-checkbox-label"
+              >Соглашаюсь с рассылкой и принимаю &nbsp;
+              <a href="" class="modal-link-policy"> Условия договора</a>
+            </label>
+          </div>
+          <button class="modal-form-button">Отправить</button>
+        </form>
       </div>
     </div>
+
     <script src="./js/modal.js"></script>
   </body>
 </html>
